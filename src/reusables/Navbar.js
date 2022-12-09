@@ -259,7 +259,7 @@ export default function Navbar() {
 
   return (
 
-      <AppBar sx={{backgroundColor:'white',color:'black'}} elevation={0} className={header}>
+      <AppBar sx={{backgroundColor:'white',color:'black',height:'80px'}} elevation={0} className={header}>
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
 
