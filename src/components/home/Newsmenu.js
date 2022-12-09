@@ -100,8 +100,8 @@ export default function Homemenu() {
         }
         }
         endIcon={<ArrowRightAltIcon />}
-        // component={Link}
-        // to={'/news'}
+        component={Link}
+        to={'/news'}
       >
         Посмотреть все
       </Button>

@@ -119,7 +119,7 @@ export default function Homemenuitem({
           color:'black'
          },
       }} 
-      // component={Link} to={`news/${id}`}
+      component={Link} to={`news/${id}`}
       >{title}</Typography>
   
       <Typography sx={{

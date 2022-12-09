@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import Navbar from './reusables/Navbar';
-
+import Routes from './routes';
 
 function App() {
   return (
     <div >
       <Navbar/>
-      <Home/>
+      <Routes />
     </div>
   );
 }

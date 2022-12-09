@@ -14,12 +14,6 @@ import {
 import { makeStyles } from '@mui/styles';
 import { CloseRounded } from '@mui/icons-material';
 
-// import { BiHomeCircle } from 'react-icons/bi';
-// import { IoFastFood } from 'react-icons/io5';
-// import { MdContacts } from 'react-icons/md';
-// import { AiOutlineUser } from 'react-icons/ai';
-
-// links for the side nav
 const links = [
   {
     label: 'Главная',
