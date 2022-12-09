@@ -67,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Mulish, sans-serif',
     fontWeight: 600,
     borderRadius: '0',
-    padding: '10px 8px 10px 20px',
-    fontSize:'24px',
+    padding: '15px 8px 20px 20px',
+    fontSize:'1.2rem',
     display: 'flex',
     justifyContent: 'flex-start',
     textTransform: 'capitalize',
@@ -86,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Mulish, sans-serif',
     fontWeight: 600,
     borderRadius: '0',
-    padding: '10px 8px 10px 20px',
-    fontSize:'24px',
+    padding: '15px 8px 20px 20px',
+    fontSize:'1.2rem',
     display: 'flex',
     justifyContent: 'flex-start',
     textTransform: 'capitalize',
@@ -123,8 +123,7 @@ const ListStyle = styled(List)(({ theme }) => ({
 
 export default function Sidedrawer(props) {
   const { xmark, button,button2, usersection, selected } = useStyles();
-  const auth = useSelector((state) => state.authReducer);
-
+  
   const userData = () => {
     return (
      
