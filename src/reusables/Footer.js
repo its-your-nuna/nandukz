@@ -9,7 +9,10 @@ Heading,
 } from "./FooterStyles";
 import { IconBrandGmail, IconBrandInstagram, IconBrandWhatsapp } from '@tabler/icons';
 import { Box} from '@mui/material';
-const Footer = () => {
+import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import menudata from '../utils/rest';
+const Footer = ( ) => {
 return (
 	<Box>
 	
@@ -17,19 +20,55 @@ return (
 		<Row>
 		<Column>
 			<Heading>Страницы</Heading>
-			<FooterLink href="#">Главная</FooterLink>
-			<FooterLink href="#">Меню</FooterLink>
-			<FooterLink href="#">Рестораны</FooterLink>
-            <FooterLink href="#">О нас</FooterLink>
-			<FooterLink href="#">Сотрудничество</FooterLink>
+			<Link style={{
+                fontFamily: 'Inter, sans-serif',
+                color:'black',
+                
+                marginTop: '10px',
+                textDecoration:'none'
+            }} component={NavLink} to="/">Главная</Link>
+			<Link style={{
+                fontFamily: 'Inter, sans-serif',
+                color:'black',
+                
+                marginTop: '10px',
+                textDecoration:'none'
+            }} component={NavLink} to="/allmeals">Меню</Link>
+			<Link style={{
+                fontFamily: 'Inter, sans-serif',
+                color:'black',
+                
+                marginTop: '10px',
+                textDecoration:'none'
+            }} component={NavLink} to href="/restorants">Рестораны</Link>
+            <Link style={{
+                fontFamily: 'Inter, sans-serif',
+                color:'black',
+                
+                marginTop: '10px',
+                textDecoration:'none'
+            }} component={NavLink} to="/about">О нас</Link>
+			<Link style={{
+                fontFamily: 'Inter, sans-serif',
+                color:'black',
+                
+                marginTop: '10px',
+                textDecoration:'none'
+            }} component={NavLink} to="/form">Сотрудничество</Link>
 		</Column>
-		<Column>
+        <Column>
 			<Heading>Наши рестораны</Heading>
-			<FooterLink href="#">Улица Алматы</FooterLink>
-			<FooterLink href="#">Улица Алматы</FooterLink>
-            <FooterLink href="#">Улица Алматы</FooterLink>
-            <FooterLink href="#">Улица Алматы</FooterLink>
-		</Column>
+        {menudata.map((data, index) => (
+
+			<Link style={{
+                fontFamily: 'Inter, sans-serif',
+                color:'black',
+                marginTop: '10px',
+                textDecoration:'none'
+            }} component={NavLink} to={`/restorants/${data.id}`}>Улица Алматы</Link>
+			
+            ))}
+            </Column>
 		
 		<Column>
 			<Heading>Наши соцсети</Heading>

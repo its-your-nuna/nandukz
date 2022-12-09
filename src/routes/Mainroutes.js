@@ -4,10 +4,11 @@ import Home from '../pages/Home';
 import Allfoods from '../pages/Allfoods';
 import AboutUs from '../pages/AboutUs';
 // import Checkout from '../pages/Checkout';
-// import NewsPage from '../pages/NewsPage';
+import NewsPage from '../pages/NewsPage';
 // import NotFound from '../pages/NotFound';
 import Forms from '../pages/Forms';
-// import  ViewDetails  from '../pages/ViewDetails';
+import  ViewDetails  from '../pages/ViewDetails';
+import RestaurantsDetails from '../pages/RestaurantsDetails'
 // import Products from './Products';
 // import ProductDetail from './ProductDetail';
 import Restaurants from '../pages/Restaurants';
@@ -26,10 +27,10 @@ const AuthenticationRoutes = () => [
     element: <Forms />,
   },
  
-  // {
-  //   path: '/news',
-  //   element: <NewsPage/>,
-  // },
+  {
+    path: '/news',
+    element: <NewsPage/>,
+  },
   {
     path: '/about',
     element: <AboutUs/>,
@@ -42,10 +43,14 @@ const AuthenticationRoutes = () => [
     path:'/restorants',
     element:<Restaurants />
   },
-  // {
-  //   path:'/news/:id',
-  //   element:<ViewDetails/>
-  // },
+  {
+    path:'/news/:id',
+    element:<ViewDetails/>
+  },
+  {
+    path:'/restorants/:id',
+    element:<RestaurantsDetails />
+  },
   // {
   //   path:'/products/:productId',
   //   element:<ProductDetail />

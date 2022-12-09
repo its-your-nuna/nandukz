@@ -120,6 +120,7 @@ export default function Restaurant() {
   );
 }
 function RestaurantItem({
+  id,
   title,
   description,
   time,
@@ -200,7 +201,7 @@ function RestaurantItem({
           }
         }
         component={Link}
-        to={'/news'}
+        to={`/restorants/${id}`}
       >
          Подробнее
       </Button>
