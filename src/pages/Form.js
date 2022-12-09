@@ -1,13 +1,15 @@
 import * as React from "react";
+import { useRef } from 'react';
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-
+import emailjs from '@emailjs/browser';
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Typography  from '@mui/material/Typography';
+import Input from '@mui/material/Input';
 import { makeStyles } from '@mui/styles';
 const theme = createTheme();
 const useStyles = makeStyles(() => ({
@@ -40,17 +42,40 @@ export default function SignIn() {
     about_descriptions,
     all
 } = useStyles();
+const form = useRef();
+const form2 = document.getElementById('form');
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_wovvjsn', 'template_gerbghg', form.current, 'rkVj5zaNn98UBEEJJ')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    
+    form2.reset();
+};
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get("email"),
-      password: data.get("password")
+      email: data.get("name"),
+      password: data.get("birthday")
     });
   };
 
   return (
     <>
+{/* <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form> */}
 
       <Container className={about_section}  width="450px">
        
@@ -59,7 +84,8 @@ export default function SignIn() {
             marginTop: 8,
             display: "flex",
             flexDirection: "column",
-            alignItems: "center"
+            alignItems: "center",
+            justifyContent:'center'
           }}
         >
            <Typography 
@@ -79,11 +105,14 @@ export default function SignIn() {
             Личные данные
           </Typography>
           <Box
+            ref={form}
             component="form"
-            onSubmit={handleSubmit}
+            onSubmit={sendEmail}
             noValidate
             sx={{ mt: 1 }}
+            id="form"
           >
+            {/* <input type="text" name="name" /> */}
             <TextField
               margin="normal"
               required
@@ -140,37 +169,16 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="address"
+              id="city"
               label="Город, в котором планируете открыть Nandu"
-              name="address"
-              autoComplete="address"
+              name="city"
+              autoComplete="city"
               autoFocus
               sx={{
                 background:'white',
               }}
             />
-            {/* <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button> */}
-          
-          </Box>
-        </Box>
-      </Container>
-      <Container className={about_section}  width="450px">
-       
-        <Box
-          sx={{
-            marginTop: 8,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center"
-          }}
-        >
+           
            <Typography 
            sx={{
             fontFamily: 'Inter, sans-serif',
@@ -187,12 +195,7 @@ export default function SignIn() {
            component="p">
            Образование и профессиональный опыт
           </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{ mt: 1 }}
-          >
+         
             <TextField
               margin="normal"
               required
@@ -210,10 +213,10 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="birthday"
+              id="job"
               label="В каких сферах работали и/или каким бизнесом управляли?"
-              name="birthday"
-              autoComplete="email"
+              name="job"
+              autoComplete="job"
               autoFocus
               sx={{
                 background:'white',
@@ -223,10 +226,10 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="phone"
+              id="current"
               label="Чем занимаетесь на данный момент?"
-              name="phone"
-              autoComplete="phone"
+              name="current"
+              autoComplete="current"
               autoFocus
               sx={{
                 background:'white',
@@ -236,39 +239,18 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="address"
+              id="experience"
               label="Расскажите про ваш опыт в бизнесе или карьере"
-              name="address"
-              autoComplete="address"
+              name="experience"
+              autoComplete="experience"
               autoFocus
               sx={{
                 background:'white',
               }}
             />
            
-            {/* <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button> */}
+            
           
-          </Box>
-        </Box>
-      </Container>
-      <Container className={about_section} sx={{ marginBottom:'50px'}}  width="450px">
-       
-        <Box
-          sx={{
-            marginTop: 8,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-           
-          }}
-        >
            <Typography 
            sx={{
             fontFamily: 'Inter, sans-serif',
@@ -285,20 +267,15 @@ export default function SignIn() {
            component="p">
             О франшизе
           </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{ mt: 1 }}
-          >
+          
             <TextField
               margin="normal"
               required
               fullWidth
-              id="experience"
+              id="choose"
               label="У вас есть опыт работы в сфере общепита?"
-              name="experience"
-              autoComplete="experience"
+              name="choose"
+              autoComplete="choose"
               autoFocus
               sx={{
                 background:'white',
@@ -330,21 +307,18 @@ export default function SignIn() {
                 background:'white',
                 
               }}
-            />
-           
-            
-          
-          </Box>
-        </Box>
-      </Container>
+            />  
       <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{  width:'200px', margin:'0 auto' ,}}
+              sx={{  width:'200px',marginTop:'50px'}}
             >
               Отправить
             </Button>
+            </Box>
+            </Box>
+      </Container>
       </>
   );
 }
