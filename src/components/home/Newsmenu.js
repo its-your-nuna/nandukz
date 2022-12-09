@@ -88,7 +88,7 @@ export default function Homemenu() {
           fontWeight: 'bold',
           width: '170px',
           marginTop: '25px',
-          fontSize: '1.2rem',
+          fontSize: '0.8rem',
           textTransform: 'lowercase',
           background: 'white',
           color:'black',

@@ -116,7 +116,7 @@ export default function Homemenuitem({
       </div>
       <Typography  sx={{
         fontFamily: 'Inter, sans-serif',
-        fontSize: '.9rem',
+        fontSize: '0.7rem',
         fontWeight: 'bold',
         marginTop: '15px',
       }} variant="h2" component="h1">
@@ -124,7 +124,7 @@ export default function Homemenuitem({
       </Typography>
       <Typography sx={{
          fontFamily: 'Inter, sans-serif',
-         fontSize: '.7rem',
+         fontSize: '0.5rem',
          fontWeight: 'bold',
          marginTop: '2px',
       }} variant="h2" component="h1">
@@ -132,7 +132,7 @@ export default function Homemenuitem({
       </Typography>
       <Typography sx={{
          fontFamily: 'Inter, sans-serif',
-         fontSize: '.7rem',
+         fontSize: '0.5rem',
          fontWeight: 'bold',
          color: 'black',
          marginTop: '4px',
@@ -142,7 +142,7 @@ export default function Homemenuitem({
       <div className={lower_div}>
         <Typography sx={{
            fontFamily: 'Inter, sans-serif',
-           fontSize: '.9rem',
+           fontSize: '0.7rem',
            fontWeight: 'bold',
         }} variant="h2" component="h1">
           {price}

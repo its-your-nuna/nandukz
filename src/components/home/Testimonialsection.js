@@ -87,15 +87,16 @@ export default function Testimonialsection() {
     <div className={testimonial_section}>
       <div className={homemenu_explore}>
         <Typography sx={{
-          fontFamily: 'Inter, sans-serif',
-          fontSize: '3rem',
-          fontWeight: 'bold',
-          marginTop: '50px',
-          textAlign: 'center',
-          color:'#202794',
-          '@media (max-width: 500px)': {
-            fontSize: '2.5rem',
-          },
+         fontFamily: 'Inter, sans-serif',
+         fontSize: '2rem',
+         fontWeight: 'bold',
+         marginTop: '50px',
+         
+         color:'#202794',
+         '@media (max-width: 500px)': {
+           marginTop: '25px',
+           fontSize: '1.2rem',
+         },
         }} variant="h2" component="h1">
           Наши лучшие блюда
         </Typography>

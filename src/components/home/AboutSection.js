@@ -88,15 +88,16 @@ export default function AboutSection() {
   return (
     <div >
       <Typography sx={{
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '3rem',
-        fontWeight: 'bold',
-        marginTop: '50px',
-        textAlign: 'center',
-        color:'#202794',
-        '@media (max-width: 500px)': {
-          fontSize: '2.5rem',
-        },
+         fontFamily: 'Inter, sans-serif',
+         fontSize: '2rem',
+         fontWeight: 'bold',
+         marginTop: '50px',
+         textAlign:'center',
+         color:'#202794',
+         '@media (max-width: 500px)': {
+           marginTop: '25px',
+           fontSize: '1.2rem',
+         },
       }} component="h1">
           Сертификаты
         </Typography>
@@ -107,12 +108,13 @@ export default function AboutSection() {
         
         <Typography sx={{
           fontFamily: 'Inter, sans-serif',
-          fontSize: '3rem',
+          fontSize: '2rem',
           fontWeight: 'bold',
           marginTop: '50px',
           color:'black',
           '@media (max-width: 900px)': {
-            fontSize: '2rem',
+            marginTop: '25px',
+            fontSize: '1.2rem',
           },
         }}variant="h2" component="h1">
         Мы очень горды, 
@@ -121,11 +123,11 @@ export default function AboutSection() {
            width:'40vw',
            fontFamily: 'Inter, sans-serif',
            color:'grey',
-           fontSize: '1.5rem',
+           fontSize: '1rem',
            marginTop: '25px',
            fontWeight: 'bold',
            '@media (max-width: 900px)': {
-             fontSize: '1.2rem',
+             fontSize: '0.8rem',
            },
         }} component="p">
         что сеть «Korean Street Food»-это казахстанская сеть общественного питания! Наша сеть имеет запатентованный зарегистрированный товарный знак. 

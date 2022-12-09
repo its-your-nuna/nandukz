@@ -112,7 +112,7 @@ export default function Homemenuitem({
          marginTop: '5px',
          color:'black',
          whiteSpace:'nowrap',
-         width:'100px',
+         width:'150px',
          textOverflow:'ellipsis',
          '&:hover': {
           textDecoration:'underline',
