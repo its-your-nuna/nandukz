@@ -133,7 +133,7 @@ const useStyles = makeStyles(() => ({
     margin:'0 auto',
     '@media (max-width: 1500px)': {
       width:'80vw',
-      height:'300px'
+      height:'400px'
     },
     '@media (max-width: 900px)': {
       width:'80vw',
@@ -215,9 +215,9 @@ function AboutSection() {
     return (
         <div className={all}>
        
-          <div className={about_section}>
+          {/* <div className={about_section}>
         <img className={about_image}  src='index.jpeg'/>
-        <div>          
+        {/* <div>          
         <Typography sx={{margin:'0 auto',
         fontFamily: 'Inter, sans-serif',
       
@@ -232,8 +232,8 @@ function AboutSection() {
         },}} component="p">
           Меня зовут Пак Владимир. Я являюсь основателем, идейным вдохновителем и генеральным директором сети «Korean Street Food». Идея зарождения сети появилась из желания познакомить всех желающих с южнокорейской кухней. Чтобы наши посетители, попробовав наши блюда, немного познакомились с культурой Южной Кореи, ощутив ее национальный вкус.
           </Typography>  
-        </div>
-        </div>
+        </div> */}
+        {/* </div> */} 
         <div className={about_section}>
         <div >         
          <Typography sx={{
@@ -284,7 +284,7 @@ function AboutSection() {
           </Typography> 
       
       <img src='index4.jpeg' className={images} />
-      <img src='index6.jpeg' className={images}/>
+      <img src='people2.png' className={images}/>
      </div>
     );
   }
