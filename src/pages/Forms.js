@@ -24,9 +24,13 @@ const useStyles = makeStyles(() => ({
         width: '450px',
         objectFit:'contain',
         '@media (max-width: 900px)': {
-         width:'180px',
+         width:'350px',
          height:'250px'
         },
+        '@media (max-width: 500px)': {
+          width:'200px',
+          height:'250px'
+         },
       },
     
     
@@ -187,7 +191,7 @@ function AboutSection() {
         <div className={all}>
        
           <div className={about_section}>
-        <img className={about_image}  src='form1.png'/>
+        <img className={about_image}  src='image9.png'/>
         <div>  
         <Typography 
          sx={{
@@ -199,7 +203,7 @@ function AboutSection() {
             color:'#202794',
             '@media (max-width: 500px)': {
               marginTop: '25px',
-              fontSize: '1.2rem',
+              fontSize: '0.9rem',
             },
           }}
         >СОТРУДНИЧЕСТВО </Typography>        
@@ -211,11 +215,13 @@ function AboutSection() {
         fontSize: '1rem',
         marginTop: '25px',
         fontWeight: 'bold',
+        marginLeft:'50px',
        
         '@media (max-width: 500px)': {
-          fontSize: '0.6rem',
+          marginLeft:'0px',
+          fontSize: '0.75rem',
         },}}
-        style = {{marginLeft:'50px'}} component="p">
+        component="p">
         Вам интересно сотрудничество с нами?
         <br/>
         Отправьте ваши предложения и мы обязательно рассмотрим ваши предложения!
@@ -234,42 +240,41 @@ function AboutSection() {
             color:'#202794',
             '@media (max-width: 500px)': {
               marginTop: '25px',
-              fontSize: '1.2rem',
+              fontSize: '0.9rem',
             },
           }}
         > ФРАНШИЗА </Typography>  
          <Typography 
           sx = {{margin:'0 auto',
           fontFamily: 'Inter, sans-serif',
-        
+          marginRight:'50px',
           fontSize: '1rem',
           marginTop: '25px',
           fontWeight: 'bold',
          
           '@media (max-width: 500px)': {
-            fontSize: '0.6rem',
+            marginRight:'0px',
+            fontSize: '0.75rem',
           },}}
-         style = {{marginRight:'50px'}} component="p">
-         Наш девиз: ” Зарабатывать не на партнере, а зарабатывать вместе с ним!”
-        <br/>
-        Мы ищем единомышленников, с которыми вместе будем улучшать наш бизнес!
+         component="p">
+         Мы ищем сильных партнёров с кем мы можем вместе рости, зарабатывать и поднимать экономику нашей родины Казахстан. 
           </Typography>  
         </div>
-        <img className={about_image}  src='form2.png'/>
+        <img className={about_image}  src='image10.png'/>
          </div>
          <Typography
          sx={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            marginTop: '50px',
-            textAlign:'center',
-            color:'#202794',
-            '@media (max-width: 500px)': {
-              marginTop: '25px',
-              fontSize: '1.2rem',
-            },
-          }}
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          marginTop: '50px',
+          textAlign:'center',
+          color:'#202794',
+          '@media (max-width: 500px)': {
+            marginTop: '25px',
+            fontSize: '1.2rem',
+          },
+        }}
          component="h1">
          Оставьте заявку
           </Typography>

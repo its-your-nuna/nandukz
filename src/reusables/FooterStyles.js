@@ -29,7 +29,7 @@ flex-direction: column;
 text-align: left;
 width:200px;
 margin-top:50px;
-margin-bottom:50px
+margin-bottom:10px
 
 `;
 export const Column2 = styled.div`

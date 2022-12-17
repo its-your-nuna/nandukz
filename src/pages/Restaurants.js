@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   home_menu_item: {
-    width:'250px',
-    margin:'10px',
+    width:'300px',
+    margin:'30px',
     padding: '50px 10px',
     display:'flex',
     flexDirection:'column',
@@ -163,30 +163,63 @@ function RestaurantItem({
       }} variant="h2" component="h1">
         {description}
       </Typography>
+      <div style={{display:'flex'}}>
+      <Typography sx={{
+         fontFamily: 'Inter, sans-serif',
+         fontSize: '0.8rem',
+         fontWeight: 'bold',
+         marginTop: '0px',
+         marginRight:'10px'
+      }} variant="h2" >
+        {time[0]}
+      </Typography>
       <Typography sx={{
          fontFamily: 'Inter, sans-serif',
          fontSize: '0.8rem',
          fontWeight: 'bold',
          marginTop: '5px',
       }} variant="h2" >
-        {time[0]}{time[1]}
+        {time[1]}
       </Typography>
-      <Typography  sx={{
+      </div>
+      <div style={{display:'flex'}}>
+      <Typography sx={{
+         fontFamily: 'Inter, sans-serif',
+         fontSize: '0.8rem',
+         fontWeight: 'bold',
+         marginTop: '0px',
+         marginRight:'10px'
+      }} variant="h2" >
+        {address[0]}
+      </Typography>
+      <Typography sx={{
          fontFamily: 'Inter, sans-serif',
          fontSize: '0.8rem',
          fontWeight: 'bold',
          marginTop: '5px',
       }} variant="h2" >
-        {address[0]}{address[1]}
+        {address[1]}
       </Typography>
-      <Typography  sx={{
+      </div>
+      <div style={{display:'flex'}}>
+      <Typography sx={{
+         fontFamily: 'Inter, sans-serif',
+         fontSize: '0.8rem',
+         fontWeight: 'bold',
+         marginTop: '0px',
+         marginRight:'10px'
+      }} variant="h2" >
+        {phone[0]}
+      </Typography>
+      <Typography sx={{
          fontFamily: 'Inter, sans-serif',
          fontSize: '0.8rem',
          fontWeight: 'bold',
          marginTop: '5px',
       }} variant="h2" >
-        {phone[0]}{phone[1]}
+        {phone[1]}
       </Typography>
+      </div>
       <Button
         disableElevation
         sx={{

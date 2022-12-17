@@ -8,8 +8,12 @@ import Typography from "@mui/material/Typography";
 
 const useStyles = makeStyles({
   root: {
-    width: 345,
-    margin:'50px'
+    width: 250,
+    margin:'15px',
+    '@media (max-width: 900px)': {
+      width: 150,
+      margin:'10px'
+    },
   },
   roots: {
     maxWidth:1170,
@@ -19,8 +23,10 @@ const useStyles = makeStyles({
     flexWrap:'wrap'
   },
   media: {
-    height: "100px",
-    backgroundSize:'150px'
+    height: "150px",
+    '@media (max-width: 900px)': {
+      height: "100px",
+    }
   }
 });
 
@@ -30,7 +36,7 @@ const Menu = ({items,clicked}) => {
     <div className={classes.roots}>
       {clicked?items.map((menuItem) => {
         const {id,title,img,price,desc,category} = menuItem;
-       if(category == 'первые блюда'){
+       if(category == 'основные блюда'){
         return <Card className={classes.root}>
         <CardMedia
           className={classes.media}
@@ -38,7 +44,16 @@ const Menu = ({items,clicked}) => {
           title="Paella dish"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography  sx={{
+      fontFamily: 'Inter, sans-serif',
+      marginTop: '20px',
+      fontSize: '1rem',
+      fontWeight: 'bold',
+      '@media (max-width: 900px)': {
+        fontSize: '0.7rem',
+      },
+     
+   }}  gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -60,7 +75,17 @@ const Menu = ({items,clicked}) => {
     title="Paella dish"
   />
   <CardContent>
-    <Typography gutterBottom variant="h5" component="h2">
+    <Typography
+    sx={{
+      fontFamily: 'Inter, sans-serif',
+      marginTop: '20px',
+      fontSize: '1rem',
+      fontWeight: 'bold',
+      '@media (max-width: 900px)': {
+        fontSize: '0.7rem',
+      },
+     
+   }} gutterBottom variant="h5" component="h2">
       {title}
     </Typography>
     <Typography variant="body2" color="textSecondary" component="p">

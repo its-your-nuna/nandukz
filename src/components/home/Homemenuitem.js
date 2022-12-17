@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { Star } from '@mui/icons-material';
+
 const useStyles = makeStyles((theme) => ({
   home_menu_item: {
     border: '1px solid #F2F2F2',
@@ -10,8 +12,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     cursor: 'pointer',
     padding: '7px',
-    // marginRight: '20px',
-    marginTop: '50px',
+    margin: '50px 20px 0px 20px',
     transition: 'all 0.6s ease-in-out',
     '&:hover': {
       background: '#f93b1d',
@@ -21,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     '@media (max-width: 900px)': {
-      // padding: '2px',
-      // marginRight: '0px',
-      // marginTop: '20px',
+      margin: '50px 10px 0px 10px',
       height: '200px',
       width: '100px',
+    },
+    '@media (max-width: 500px)': {
+      margin: '50px 5px 0px 5px',
     },
   },
   hmi_img_div: {
@@ -36,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
     height: '200px',
     width: '200px',
     '@media (max-width: 900px)': {
-      height: '80px',
-      width: '60px',
+      height: '85px',
+      width: '100px',
     },
   },
   hmi_food_title: {
@@ -116,21 +118,25 @@ export default function Homemenuitem({
       </div>
       <Typography  sx={{
         fontFamily: 'Inter, sans-serif',
-        fontSize: '0.7rem',
+        fontSize: '1rem',
         fontWeight: 'bold',
         marginTop: '15px',
+        textAlign:'center',
+        '@media (max-width: 900px)': {
+          fontSize: '0.7rem',
+        },
       }} variant="h2" component="h1">
         {title}
       </Typography>
-      <Typography sx={{
+      {/* <Typography sx={{
          fontFamily: 'Inter, sans-serif',
-         fontSize: '0.5rem',
+         fontSize: '0.8rem',
          fontWeight: 'bold',
          marginTop: '2px',
       }} variant="h2" component="h1">
         {sub_title}
-      </Typography>
-      <Typography sx={{
+      </Typography> */}
+      {/* <Typography sx={{
          fontFamily: 'Inter, sans-serif',
          fontSize: '0.5rem',
          fontWeight: 'bold',
@@ -138,12 +144,15 @@ export default function Homemenuitem({
          marginTop: '4px',
       }} variant="h2" component="h1">
         {colories}
-      </Typography>
+      </Typography> */}
       <div className={lower_div}>
         <Typography sx={{
            fontFamily: 'Inter, sans-serif',
-           fontSize: '0.7rem',
+           fontSize: '0.8rem',
            fontWeight: 'bold',
+           '@media (max-width: 900px)': {
+            fontSize: '0.7rem',
+          },
         }} variant="h2" component="h1">
           {price}
         </Typography>
@@ -153,19 +162,20 @@ export default function Homemenuitem({
           sx={{
             textTransform: 'lowercase',
             fontFamily: 'Inter, sans-serif',
-            fontSize: '.7rem',
+            fontSize: '.8rem',
             fontWeight: 'bold',
             borderRadius: '7px',
             height: '30px',
             backgroundColor:'#f93b1d',
             color:'white',
             '@media (max-width: 900px)': {
-              marginTop: '2px',
+              fontSize: '0.7rem',
+              marginTop: '5px',
               height: '20px',
             },
           }}
         >
-          New
+          9.8 <Star sx={{width:'14px'}}/>
         </Button>
       </div>
     </div>

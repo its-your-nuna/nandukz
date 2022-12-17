@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+@font-face {
+  font-family: 'Mazzard';
+  src:  url('../Mazzard/MazzardH-Black.otf') format('opentype'),
+  url('../Mazzard/MazzardH-BlackItalic.otf') format('opentype');
+}
 
 .App-logo {
   height: 40vmin;

@@ -64,10 +64,11 @@ const useStyles = makeStyles(() => ({
       },
 
   leaderBoard: {
+    marginTop:'100px',
     textAlign:'center',
     display: 'flex',
     color:'white',
-    background: "linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('https://images.unsplash.com/photo-1635363638580-c2809d049eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
+    background: "linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),url('index5.jpeg')",
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     width:'100vw',
@@ -127,7 +128,7 @@ const useStyles = makeStyles(() => ({
   images:{
     overflow:'hidden',
     width:'60vw',
-    height:'500px',
+    height:'520px',
     marginTop:'50px',
     margin:'0 auto',
     '@media (max-width: 1500px)': {
@@ -190,7 +191,7 @@ export default function LeaderBoard() {
                width:'100vw',
              },
           }} component="p">
-          Наша команда прошла нелегкий путь, чтобы добиться определенных результатов и завоевать доверие наших гостей. Были и совсем трудные моменты, но мы справились и готовы радовать наших гостей как в Республике Казахстан, так и в странах СНГ! 
+          «Nandu» - это место где каждый может отдохнуть от городской суеты и рутины повседневной жизни. Вас встретят доброжелательный, позитивный персонал.  Наша миссия снижать социальное напряжение в обществе во благо народа. 
           </Typography>
           <hr className={hr}/>
          
@@ -215,7 +216,7 @@ function AboutSection() {
         <div className={all}>
        
           <div className={about_section}>
-        <img className={about_image}  src='people1.png'/>
+        <img className={about_image}  src='index.jpeg'/>
         <div>          
         <Typography sx={{margin:'0 auto',
         fontFamily: 'Inter, sans-serif',
@@ -223,10 +224,12 @@ function AboutSection() {
         fontSize: '1rem',
         marginTop: '25px',
         fontWeight: 'bold',
-        
+        marginLeft:'50px',
         '@media (max-width: 500px)': {
+          marginTop: '5px',
+          marginLeft:'10px',
           fontSize: '0.6rem',
-        },}} style = {{marginLeft:'50px'}} component="p">
+        },}} component="p">
           Меня зовут Пак Владимир. Я являюсь основателем, идейным вдохновителем и генеральным директором сети «Korean Street Food». Идея зарождения сети появилась из желания познакомить всех желающих с южнокорейской кухней. Чтобы наши посетители, попробовав наши блюда, немного познакомились с культурой Южной Кореи, ощутив ее национальный вкус.
           </Typography>  
         </div>
@@ -240,15 +243,16 @@ function AboutSection() {
           fontSize: '1rem',
           marginTop: '25px',
           fontWeight: 'bold',
-         
+          marginRight:'50px',
           '@media (max-width: 500px)': {
             fontSize: '0.6rem',
+            marginRight:'0px'
           },
-         }} style = {{marginRight:'50px'}} component="p">
+         }}  component="p">
          Наша команда старается идти в ногу со временем, осознавая, что люди предпочитают тратить минимум времени на ожидание приготовления блюд, поэтому сеть «Korean Street Food»-это абсолютно новое направление в сфере быстрого питания. 
           </Typography>  
         </div>
-        <img className={about_image}  src='people5.png'/>
+        <img className={about_image}  src='index3.jpeg'/>
          </div>
          <Typography 
          sx={{
@@ -276,11 +280,11 @@ function AboutSection() {
         '@media (max-width: 500px)': {
           fontSize: '0.6rem',
         },}} component="p">
-          сеть «Korean Street Food» включает в себя семь филиалов по Республике Казахстан:
+          У нас два филиала по Республике Казахстан:
           </Typography> 
-      <img src='people2.png' className={images} />
-      <img src='people3.png' className={images}/>
-      <img src='https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' className={images}/>
-      </div>
+      
+      <img src='index4.jpeg' className={images} />
+      <img src='index6.jpeg' className={images}/>
+     </div>
     );
   }

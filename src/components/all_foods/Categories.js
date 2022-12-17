@@ -2,6 +2,8 @@ import React from 'react';
 import {Button, Paper } from '@mui/material';
 import { IconBowl, IconCup, IconPaperBag, IconSalad, IconSoup } from '@tabler/icons';
 import { makeStyles } from '@mui/styles';
+import { Cake, Coffee, RamenDining } from '@mui/icons-material';
+
 const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: '20px',
@@ -33,22 +35,22 @@ const Categories = ({categories,filterItems}) => {
     homemenu_data,
   } = useStyles();
   var icon = [];
-  if(categories[0]=='первые блюда'){
-    icon[0] = <IconBowl/>
+  if(categories[0]=='основные блюда'){
+    icon[0] = <RamenDining/>
   }
-  if(categories[1]=='вторые блюда'){
-    icon[1] = <IconSoup/>
-  }
+  // if(categories[1]=='вторые блюда'){
+  //   icon[1] = <IconSoup/>
+  // }
 
-  if(categories[2]=='напитки и десерты'){
-    icon[2] = <IconCup/>
+  if(categories[1]=='напитки и десерты'){
+    icon[1] = <Coffee/>
   }
-  if(categories[3]=='салаты'){
-    icon[3] = <IconSalad/>
-  }
-  if(categories[4]=='сеты'){
-    icon[4] = <IconPaperBag/>
-  }
+  // if(categories[3]=='салаты'){
+  //   icon[3] = <IconSalad/>
+  // }
+  // if(categories[4]=='сеты'){
+  //   icon[4] = <IconPaperBag/>
+  //}
   console.log(categories,icon)
   return <div className={homemenu_data}>
     {categories.map((category,index) => {
@@ -74,7 +76,7 @@ const Categories = ({categories,filterItems}) => {
             margin: '10px',
           },
           '@media (max-width: 500px)': {
-            fontSize: '0.6rem',
+            fontSize: '0.8rem',
             margin: '10px',
           },
         }}

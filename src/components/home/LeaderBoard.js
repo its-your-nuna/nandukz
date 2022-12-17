@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     // paddingLeft: '118px',
     marginTop:'80px',
     color:'white',
-    backgroundImage: "url('https://images.unsplash.com/photo-1635363638580-c2809d049eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
+    background: "linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),url('index5.jpeg')",
     backgroundRepeat: 'no-repeat',
   
     backgroundPosition: 'center',
@@ -107,7 +107,7 @@ export default function LeaderBoard() {
               fontSize: '3rem',
               fontWeight: 'bold',
               '@media (max-width: 900px)': {
-                fontSize: '2.5rem',
+                fontSize: '2.2rem',
               },
               '@media (max-width: 500px)': {
                 fontSize: '1.5rem',
@@ -116,7 +116,7 @@ export default function LeaderBoard() {
             variant="h2"
             component="h1"
           >
-            Ждем вас, дорогие гости! <br /> 
+            Дорогие гости, мы ждем вас! <br /> 
           </Typography>
           <Typography sx={{
              fontFamily: 'Inter, sans-serif',
@@ -127,11 +127,10 @@ export default function LeaderBoard() {
                fontSize: '1rem',
              },
              '@media (max-width: 500px)': {
-              fontSize: '0.5rem',
+              fontSize: '1rem',
             },
           }} component="p">
-            Сеть "Nandu" с радостью и большим удовольствием познакомит всех желающих с  <br /> 
-            удивительной южно-корейской кухней
+            Казахстанский бренд. От  создателей Gippo и Basilic, сеть корейского стрит-фуда «Nandu». 
           </Typography>
         
         </div>

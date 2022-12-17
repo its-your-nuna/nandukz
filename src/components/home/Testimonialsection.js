@@ -102,13 +102,13 @@ export default function Testimonialsection() {
         </Typography>
       </div>
       <div style={{ display: 'flex' }}>
-        <div className={testimonial_control}> 
+        {/* <div className={testimonial_control}> 
           <ArrowBackIosIcon
             onClick={() => control.current.prev()}
             className={testimonial_control_icon}
           /> 
-         </div>
-        <OwlCarousel
+         </div> */}
+        {/* <OwlCarousel
           
           autoplayHoverPause={false}
           animateOut="fadeOut"
@@ -133,7 +133,7 @@ export default function Testimonialsection() {
           }}
           margin={10}
           center={true}
-        >
+        > */}
           {menudata.map((data, index) => (
            <div key={index} className="item">
             
@@ -141,13 +141,13 @@ export default function Testimonialsection() {
           
          </div>
           ))}
-        </OwlCarousel>
-        <div className={testimonial_control}>
+        {/* </OwlCarousel> */}
+        {/* <div className={testimonial_control}>
           <ArrowForwardIosIcon
             onClick={() => control.current.next()}
             className={testimonial_control_icon}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

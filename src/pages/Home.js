@@ -12,7 +12,7 @@ export default function Home() {
       <Newsmenu/>
      
       <Testimonialsection />
-      <AboutSection />
+      {/* <AboutSection /> */}
     </div>
   );
 }

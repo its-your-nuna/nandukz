@@ -72,7 +72,7 @@ export default function Homemenu() {
             fontSize: '1.2rem',
           },
         }} variant="h2" component="h1">
-          Последние новости
+          Важные новости
         </Typography>
       </div>
 
@@ -81,7 +81,7 @@ export default function Homemenu() {
           <Homemenuitem key={index} {...data} />
         ))}
       </div>
-      <Button
+      {/* <Button
         disableElevation
         sx={{
           borderRadius: '20px',
@@ -104,7 +104,7 @@ export default function Homemenu() {
         to={'/news'}
       >
         Посмотреть все
-      </Button>
+      </Button> */}
     </div>
   );
 }

@@ -55,14 +55,17 @@ const useStyles = makeStyles({
   logo: {
     position:'absolute',
     top:'-15px',
-    left:'30%',
+    left:'20%',
     // left:'100px',
     width:'90px',
     '@media (max-width: 1500px)': {
-      left: '25%',
+      left: '20%',
     },
     '@media (max-width: 1400px)': {
-      left: '15%',
+      left: '10%',
+    },
+    '@media (max-width: 1000px)': {
+      left: '5%',
     },
     '@media (max-width: 900px)': {
       left: '40vw',
