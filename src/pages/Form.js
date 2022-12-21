@@ -1,16 +1,14 @@
 import * as React from "react";
 import { useRef } from 'react';
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import emailjs from '@emailjs/browser';
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Typography  from '@mui/material/Typography';
-import Input from '@mui/material/Input';
 import { makeStyles } from '@mui/styles';
+import Alert from './Alert'
 const theme = createTheme();
 const useStyles = makeStyles(() => ({
   about_section: {
@@ -32,18 +30,12 @@ const useStyles = makeStyles(() => ({
   },
 
 }));
-export default function SignIn() {
+export default function SignIn( {handleShow}) {
   const {
     about_section,
-    leaderBoard_left_h1,
-    
-    images,
-    about_image,
-    about_descriptions,
-    all
+  
 } = useStyles();
 const form = useRef();
-const form2 = document.getElementById('form');
 const sendEmail = (e) => {
   e.preventDefault();
 
@@ -53,30 +45,12 @@ const sendEmail = (e) => {
     }, (error) => {
         console.log(error.text);
     });
+    form.current.reset();
     
-    form2.reset();
 };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("name"),
-      password: data.get("birthday")
-    });
-  };
 
   return (
     <>
-{/* <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form> */}
-
       <Container className={about_section}  width="450px">
        
         <Box
@@ -313,6 +287,7 @@ const sendEmail = (e) => {
               fullWidth
               variant="contained"
               sx={{  width:'200px',marginTop:'50px'}}
+              onClick={handleShow}
             >
               Отправить
             </Button>
@@ -322,3 +297,7 @@ const sendEmail = (e) => {
       </>
   );
 }
+
+
+
+

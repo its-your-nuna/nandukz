@@ -12,6 +12,7 @@ import RestaurantsDetails from '../pages/RestaurantsDetails'
 // import Products from './Products';
 // import ProductDetail from './ProductDetail';
 import Restaurants from '../pages/Restaurants';
+
 const AuthenticationRoutes = () => [
   {
     path: '/',
@@ -43,10 +44,10 @@ const AuthenticationRoutes = () => [
     path:'/restorants',
     element:<Restaurants />
   },
-  {
-    path:'/news/:id',
-    element:<ViewDetails/>
-  },
+  // {
+  //   path:'/news/:id',
+  //   element:<ViewDetails/>
+  // },
   {
     path:'/restorants/:id',
     element:<RestaurantsDetails />

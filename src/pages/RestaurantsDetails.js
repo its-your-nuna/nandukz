@@ -217,7 +217,7 @@ https://vm.tiktok.com/ZMFpLDjpP/"><TikTokIcon sx={{ marginRight:'20px',color:'#b
               fontSize: '1.2rem',
             },
       }} >Видео-обзор</Typography>
-       <iframe controls autoplay className={video} src={thisNews.tube}>
+       <iframe controls autoplay className={video} id="iframeId" src={thisNews.tube}>
         </iframe> 
      
         </div>
