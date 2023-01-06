@@ -8,18 +8,10 @@ left:0;
 bottom: 0;
 width: 100%;
 
-
-@media (max-width: 1000px) {
-	padding: 70px 30px;
-}
 `;
 
 export const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	max-width: 1000px;
-	margin: 0 auto;
+	
 	/* background: red; */
 `
 
@@ -27,10 +19,12 @@ export const Column = styled.div`
 display: flex;
 flex-direction: column;
 text-align: left;
-width:200px;
-margin-top:50px;
-margin-bottom:10px
-
+max-width:200px;
+margin:50px 5px 10px 5px;
+@media only screen and (max-width: 600px) {
+	max-width:110px;
+	font-size: .75rem;
+  }
 `;
 export const Column2 = styled.div`
 display: flex;
@@ -38,6 +32,7 @@ display: flex;
 `;
 export const Row = styled.div`
 display: flex;
+flex-wrap:wrap;
 justify-content: center;
 
 `;
@@ -57,4 +52,8 @@ font-size: 1rem;
 color: black;
 margin-bottom: 40px;
 font-weight: bold;
+@media only screen and (max-width: 600px) {
+	font-size: .85rem;
+	margin-bottom: 20px;
+  }
 `;

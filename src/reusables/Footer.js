@@ -15,9 +15,7 @@ import menudata from '../utils/rest';
 import InstagramIcon from '@mui/icons-material/Instagram';
 const Footer = ( ) => {
 return (
-	<Box>
-	
-	<Container>
+
 		<Row>
 		<Column>
 			<Heading>Страницы</Heading>
@@ -26,7 +24,8 @@ return (
                 color:'black',
                 
                 marginTop: '10px',
-                textDecoration:'none'
+                textDecoration:'none',
+                
             }} component={NavLink} to="/">Главная</Link>
 			<Link style={{
                 fontFamily: 'Inter, sans-serif',
@@ -90,8 +89,7 @@ https://vm.tiktok.com/ZMFpLDjpP/"><TikTokIcon sx={{ marginRight:'20px',color:'#b
 			
 		</Column>
 		</Row>
-	</Container>
-	</Box>
+
 );
 };
 const TikTokIcon = ({ color = "#000000" }) => {

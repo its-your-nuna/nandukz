@@ -126,23 +126,23 @@ const useStyles = makeStyles(() => ({
     },
   },
   images:{
-    overflow:'hidden',
-    width:'60vw',
-    height:'520px',
-    marginTop:'50px',
-    margin:'0 auto',
-    '@media (max-width: 1500px)': {
-      width:'80vw',
-      height:'400px'
-    },
-    '@media (max-width: 900px)': {
-      width:'80vw',
-      height:'300px'
-    },
-    '@media (max-width: 500px)': {
-      width:'80vw',
-      height:'250px'
-    }
+        background: "white",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition:'center',
+       
+        margin:'0 auto',
+        height: '550px',
+        width: '1000px',
+        marginTop:'50px',
+        '@media (max-width: 900px)': {
+          width:'500px',
+          height:'350px'
+         },
+        '@media (max-width: 500px)': {
+         width:'250px',
+         height:'200px'
+        },
   },
   hr:{
     border:'2px solid #ff3e19',
@@ -215,25 +215,6 @@ function AboutSection() {
     return (
         <div className={all}>
        
-          {/* <div className={about_section}>
-        <img className={about_image}  src='index.jpeg'/>
-        {/* <div>          
-        <Typography sx={{margin:'0 auto',
-        fontFamily: 'Inter, sans-serif',
-      
-        fontSize: '1rem',
-        marginTop: '25px',
-        fontWeight: 'bold',
-        marginLeft:'50px',
-        '@media (max-width: 500px)': {
-          marginTop: '5px',
-          marginLeft:'10px',
-          fontSize: '0.6rem',
-        },}} component="p">
-          Меня зовут Пак Владимир. Я являюсь основателем, идейным вдохновителем и генеральным директором сети «Korean Street Food». Идея зарождения сети появилась из желания познакомить всех желающих с южнокорейской кухней. Чтобы наши посетители, попробовав наши блюда, немного познакомились с культурой Южной Кореи, ощутив ее национальный вкус.
-          </Typography>  
-        </div> */}
-        {/* </div> */} 
         <div className={about_section}>
         <div >         
          <Typography sx={{
@@ -283,8 +264,10 @@ function AboutSection() {
           У нас два филиала по Республике Казахстан:
           </Typography> 
       
-      <img src='index4.jpeg' className={images} />
-      <img src='people2.png' className={images}/>
+      <img style={{backgroundImage:`url('index4.jpeg')`}} className={images} />
+      <img style={{backgroundImage:`url('people2.png')`}} className={images}/>
+      <img style={{backgroundImage:`url('people4.png')`}} className={images}/>
+      <img style={{backgroundImage:`url('image5.jpg')`}} className={images}/>
      </div>
     );
   }

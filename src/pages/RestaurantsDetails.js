@@ -35,21 +35,28 @@ const useStyles = makeStyles((theme) => ({
         },
       },
       about_image:{
-        
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition:'center',
         height: '350px',
         width: '350px',
         marginRight:'30px',
         '@media (max-width: 500px)': {
-         width:'180px',
+         width:'250px',
          height:'250px'
         },
       },
-      about_image2:{
-        overflow:'hidden',
+      
+      about_imagediv
+      :{
+        background: "rgba(0, 0, 0, 0.40)",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100%',
+        backgroundPosition:'center',
         margin:'0 auto',
         height: '550px',
         width: '1000px',
-        marginTop:'25px',
+        marginTop:'50px',
         '@media (max-width: 900px)': {
           width:'500px',
           height:'350px'
@@ -69,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
           height:'350px'
          },
         '@media (max-width: 500px)': {
-         width:'250px',
+         width:'300px',
          height:'200px'
         },
       },
@@ -113,7 +120,8 @@ function RestaurantDetails() {
         all,
         about_image,
         about_image2,
-        video
+        video,
+        about_imagediv
         
       } = useStyles();
     const {id} = useParams()
@@ -122,7 +130,8 @@ function RestaurantDetails() {
         <div className={all}>
 
 <div className={about_section}>
-<img  className={about_image}  src={thisNews.image_path}/>
+<div className={about_image} style={{backgroundImage:`url(${thisNews.image_path})`}}></div>
+
             <Typography sx={{
               fontFamily: 'Inter, sans-serif',
               fontSize: '1rem',
@@ -143,6 +152,7 @@ function RestaurantDetails() {
             '@media (max-width: 900px)': {
               marginTop: '5px',
               fontSize: '1.2rem',
+              textAlign:'left',
             },
       }} >{thisNews.title}</Typography>
       
@@ -179,18 +189,6 @@ https://vm.tiktok.com/ZMFpLDjpP/"><TikTokIcon sx={{ marginRight:'20px',color:'#b
       </div>
       </div>
       
-            {/* <Typography sx={{
-               fontFamily: 'Inter, sans-serif',
-               color:'grey',
-               fontSize: '1rem',
-               fontWeight: 'bold',
-               marginTop: '2px',
-            }} variant="h2" component="h1">
-        {thisNews.sub_title}
-      </Typography> */}
-            {/* <h1>{thisProduct.name}</h1>
-            <p>Price: ${thisProduct.price}</p>
-            <p>{thisProduct.description}</p> */}
         </div>
         <Typography  sx={{
             fontFamily: 'Inter, sans-serif',
@@ -204,7 +202,13 @@ https://vm.tiktok.com/ZMFpLDjpP/"><TikTokIcon sx={{ marginRight:'20px',color:'#b
               fontSize: '1.2rem',
             },
       }} >Картинки</Typography>
-      <img  className={about_image2}  src={thisNews.image_path2}/>
+
+      {/* <div className={about_imagediv} style={{backgroundImage:`url(${thisNews.image_path2})`}}></div> */}
+      <div className={about_imagediv} style={{backgroundImage:`url(${thisNews.image_path4})`}}></div>
+      <div className={about_imagediv} style={{backgroundImage:`url(${thisNews.image_path5})`}}></div>
+      <div className={about_imagediv} style={{backgroundImage:`url(${thisNews.image_path6})`,backgroundSize:'50%'}}></div>
+      <div className={about_imagediv} style={{backgroundImage:`url(${thisNews.image_path3})`}}></div>
+      <div className={about_imagediv} style={{backgroundImage:`url(${thisNews.image_path2})`}}></div>
       <Typography  sx={{
             fontFamily: 'Inter, sans-serif',
             fontSize: '2rem',
@@ -217,7 +221,7 @@ https://vm.tiktok.com/ZMFpLDjpP/"><TikTokIcon sx={{ marginRight:'20px',color:'#b
               fontSize: '1.2rem',
             },
       }} >Видео-обзор</Typography>
-       <iframe controls autoplay className={video} id="iframeId" src={thisNews.tube}>
+       <iframe  sandbox className={video} id="iframeId" src={thisNews.tube}>
         </iframe> 
      
         </div>
