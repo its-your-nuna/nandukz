@@ -52,7 +52,7 @@ const sendEmail = (e) => {
   var partner = document.getElementById('partner').value?true:false
   console.log((name))
   if(name&birthday&address&city&education&job&phone&current&experience&choose&buis&partner){
-  emailjs.sendForm('service_wovvjsn', 'template_gerbghg', form.current, 'rkVj5zaNn98UBEEJJ')
+  emailjs.sendForm('service_un71iy5', 'template_gerbghg', form.current, 'rkVj5zaNn98UBEEJJ')
     .then((result) => {
         console.log(result.text);
     }, (error) => {
