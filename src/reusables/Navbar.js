@@ -227,7 +227,6 @@ export default function Navbar() {
   const [myStyle, setMyStyle] = React.useState({});
 
   const handleClick = (id) => {
-    console.log(myStyle)
     setMyStyle((prevState) => ({
       [id]: !prevState[id]
     }));

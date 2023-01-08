@@ -40,7 +40,7 @@ return (
                 
                 marginTop: '10px',
                 textDecoration:'none'
-            }} component={NavLink} to href="/restorants">Рестораны</Link>
+            }} component={NavLink} to="/restorants">Рестораны</Link>
             <Link style={{
                 fontFamily: 'Inter, sans-serif',
                 color:'black',
@@ -60,7 +60,7 @@ return (
 			<Heading>Наши рестораны</Heading>
         {menudata.map((data, index) => (
 
-			<Link style={{
+			<Link key={index} style={{
                 fontFamily: 'Inter, sans-serif',
                 color:'black',
                 marginTop: '10px',

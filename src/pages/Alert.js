@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
-export default function Example({setShow,show}) {
+export default function Example({setShow,show,message}) {
 
   const handleClose = () => setShow(false);
 
@@ -20,7 +20,7 @@ export default function Example({setShow,show}) {
         <Modal.Header closeButton>
           
           <Modal.Body>
-          Ваше сообщение успешно доставлено!
+         {message}
         </Modal.Body>
        
         </Modal.Header>

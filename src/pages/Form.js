@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
   },
 
 }));
-export default function SignIn( {handleShow}) {
+export default function SignIn( {handleShow,setMessage}) {
   const {
     about_section,
   
@@ -38,7 +38,20 @@ export default function SignIn( {handleShow}) {
 const form = useRef();
 const sendEmail = (e) => {
   e.preventDefault();
-
+  var name = document.getElementById('name').value?true:false
+  var birthday = document.getElementById('birthday').value?true:false
+  var address = document.getElementById('address').value?true:false
+  var city = document.getElementById('city').value?true:false
+  var education = document.getElementById('education').value?true:false
+  var job = document.getElementById('job').value?true:false
+  var phone = document.getElementById('phone').value?true:false
+  var current = document.getElementById('current').value?true:false
+  var experience = document.getElementById('experience').value?true:false
+  var choose = document.getElementById('choose').value?true:false
+  var buis = document.getElementById('buis').value?true:false
+  var partner = document.getElementById('partner').value?true:false
+  console.log((name))
+  if(name&birthday&address&city&education&job&phone&current&experience&choose&buis&partner){
   emailjs.sendForm('service_wovvjsn', 'template_gerbghg', form.current, 'rkVj5zaNn98UBEEJJ')
     .then((result) => {
         console.log(result.text);
@@ -46,7 +59,11 @@ const sendEmail = (e) => {
         console.log(error.text);
     });
     form.current.reset();
-    
+    setMessage('Ваше сообщение успешно доставлено!')
+  }
+  else{
+    setMessage('Пожалуйста, заполните все поля')
+  }
 };
 
   return (
@@ -99,6 +116,7 @@ const sendEmail = (e) => {
               sx={{
                 background:'white',
               }}
+              
             />
              <TextField
               margin="normal"

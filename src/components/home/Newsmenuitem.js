@@ -69,7 +69,7 @@ export default function Homemenuitem({
           fontSize: '1rem',
         },
       }} 
-      component={Link} to={`news/${id}`}
+      
       >{title}</Typography>
   
       <Typography sx={{

@@ -89,11 +89,11 @@ export default function AboutSection() {
         all
     } = useStyles();
     const [show, setShow] = useState(false);
-
+    const[message,setMessage] = useState('')
   const handleShow = () => setShow(true);
     return (
       <>
-        <Alert show={show} setShow={setShow}/>
+        <Alert show={show} setShow={setShow} message={message}/>
         <div className={all}>
        
           {/* <div className={about_section}>
@@ -184,7 +184,7 @@ export default function AboutSection() {
          component="h1">
          Оставьте заявку
           </Typography>
-          <Form handleShow={handleShow}/>
+          <Form handleShow={handleShow} setMessage = {setMessage}/>
       </div>
       </>
     );
